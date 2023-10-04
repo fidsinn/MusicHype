@@ -1,0 +1,62 @@
+.middle-header {
+    text-align: center; /* Center the header horizontally */
+    margin-top: 20px; /* Adjust the margin as needed to vertically center the header */
+}
+
+.bold-header {
+    font-size: 48px; /* Adjust the font size as needed */
+    font-weight: bold; /* Make the header bold */
+}
+
+.label-header {
+    font-size: 20px; /* Adjust the font size as needed */
+    font-weight: bold; /* Make the header bold */
+    margin-bottom: -10px; /* Adjust the margin as needed to vertically center the header */
+}
+
+.text-bold {
+    font-weight: bold; /* Make the text bold */
+}
+
+.text-big-font {
+    font-size: 36px; /* Adjust the font size as needed */
+}
+
+
+.form-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: -10px; /* Adjust the margin as needed */
+}
+
+.form-label {
+    flex: 1;
+    margin-right: 10px; /* Adjust the margin as needed */
+    margin-left: 10px; /* Adjust the margin as needed */
+}
+
+.form-input {
+    flex: 2;
+    /* Add any additional styles for your inputs here */
+}
+
+.larger-button {
+    width: 300px; /* Adjust the width as needed */
+    height: 60px; /* Adjust the height as needed */
+    font-size: 16px; /* Adjust the font size as needed */
+}
+
+.center-table {
+    margin: 0 auto; /* This centers the table horizontally */
+    margin-top: 20px; /* Adjust the margin as needed to vertically center the header */
+    margin-bottom: 20px; /* Adjust the margin as needed to vertically center the header */
+}
+
+table {
+    border-collapse: collapse; /* Remove spacing between table cells */
+    width: 100%; /* Make the table take up the full width of its container */
+}
+
+th, td {
+    padding: -50px; /* Adjust the padding to control spacing between table cells */
+}

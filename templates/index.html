@@ -1,0 +1,134 @@
+{% extends "layout.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    {% block content %}
+    <div class="middle-header">
+        <h2 class="bold-header">
+                Mix Your Hype
+        </h2>
+    </div>
+    <form action="/result" method="POST">
+        <!-- <label for="release_year">Release Year:</label>
+        <input type="range" id="release_year" name="release_year" min="2000" max="2023" step="1" value="2011"> -->
+        
+        <div class="label-header">
+            <div class="form-row">
+                <label coass="form-label" for="acousticness">Acousticness:</label>
+            </div>
+        </div>
+        <br>
+        <div class="form-row">
+            <input class="form-input" type="range" id="acousticness" name="acousticness" min="0.1" max="1.0" step="0.01" value="0.55">
+        </div>
+        <br>
+                
+        <div class="label-header">
+            <div class="form-row">
+                <label coass="form-label" for="danceability">Danceability:</label>
+            </div>
+        </div>
+        <br>
+        <div class="form-row">
+            <input class="form-input" type="range" id="danceability" name="danceability" min="0.0" max="1.0" step="0.01" value="0.5">
+        </div>
+        <br>
+        
+        <div class="label-header">
+            <div class="form-row">
+                <label coass="form-label" for="duration_sec">Duration (seconds):</label>
+            </div>
+        </div>
+        <br>
+        <div class="form-row">
+            <input class="form-input" type="range" id="duration_sec" name="duration_sec" min="60" max="600" step="1" value="330">
+        </div>
+        <br>
+        
+        <div class="label-header">
+            <div class="form-row">
+                <label coass="form-label" for="energy">Energy:</label>
+            </div>
+        </div>
+        <br>
+        <div class="form-row">
+            <input class="form-input" type="range" id="energy" name="energy" min="0.0" max="1.0" step="0.01" value="0.5">
+        </div>
+        <br>
+        
+        <div class="label-header">
+            <div class="form-row">
+                <label coass="form-label" for="instrumentalness">Instrumentalness:</label>
+            </div>
+        </div>
+        <br>
+        <div class="form-row">
+            <input class="form-input" type="range" id="instrumentalness" name="instrumentalness" min="0.0" max="1.0" step="0.01" value="0.5">
+        </div>
+        <br>
+        
+        <div class="label-header">
+            <div class="form-row">
+                <label coass="form-label" for="liveness">Liveness:</label>
+            </div>
+        </div>
+        <br>
+        <div class="form-row">
+            <input class="form-input" type="range" id="liveness" name="liveness" min="0.0" max="0.4" step="0.01" value="0.2">
+        </div>
+        <br>
+        
+        <div class="label-header">
+            <div class="form-row">
+                <label coass="form-label" for="loudness">Loudness:</label>
+            </div>
+        </div>
+        <br>
+        <div class="form-row">
+            <input class="form-input" type="range" id="loudness" name="loudness" min="-20" max="0" step="1" value="-10">
+        </div>
+        <br>
+        
+        <div class="label-header">
+            <div class="form-row">
+                <label coass="form-label" for="speechiness">Speechiness:</label>
+            </div>
+        </div>
+        <br>
+        <div class="form-row">
+            <input class="form-input" type="range" id="speechiness" name="speechiness" min="0.02" max="0.4" step="0.01" value="0.21">
+        </div>
+        <br>
+        
+        <div class="label-header">
+            <div class="form-row">
+                <label coass="form-label" for="tempo">Tempo:</label>
+            </div>
+        </div>
+        <br>
+        <div class="form-row">
+            <input class="form-input" type="range" id="tempo" name="tempo" min="70" max="180" step="1" value="125">
+        </div>
+        <br>
+        
+        <div class="label-header">
+            <div class="form-row">
+                <label coass="form-label" for="valence">Valence:</label>
+            </div>
+        </div>
+        <br>
+        <div class="form-row">
+            <input class="form-input" type="range" id="valence" name="valence" min="0" max="1" step="0.01" value="0.5">
+        </div>
+        <br>
+        <div class="middle-header">
+            <input type="submit" value="Erwartete Popularität berechnen" class="larger-button">
+        </div>
+    </form>
+    {% endblock %}
+</body>
+</html>

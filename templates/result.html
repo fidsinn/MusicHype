@@ -1,0 +1,62 @@
+{% extends "layout.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    {% block content %}
+    <div class="middle-header">
+        <h2 class="bold-header">
+                Mix Your Hype
+        </h2>
+    </div>
+    <ul>
+        <div class="middle-header">
+            <li>Release Year: {{ slider_values.release_year }}</li>
+            <li>Acousticness: {{ slider_values.acousticness }}</li>
+            <li>Danceability: {{ slider_values.danceability }}</li>
+            <li>Duration (seconds): {{ slider_values.duration_sec }}</li>
+            <li>Energy: {{ slider_values.energy }}</li>
+            <li>Instrumentalness: {{ slider_values.instrumentalness }}</li>
+            <li>Liveness: {{ slider_values.liveness }}</li>
+            <li>Loudness: {{ slider_values.loudness }}</li>
+            <li>Speechiness: {{ slider_values.speechiness }}</li>
+            <li>Tempo: {{ slider_values.tempo }}</li>
+            <li>Valence: {{ slider_values.valence }}</li>
+            <li class="text-bold">Erwartete Popularität liegt bei <span class="text-big-font">{{ pop_dict.pop_pred }}</span></li>
+            <li class="text-bold">Die Popularität deines Mix liegt über <span class="text-big-font">{{ pop_dict.pop_place }}%</span> aller anderen Songs.</li>
+        </div>
+        <div class="middle-header">
+            <h2 class="bold-header">
+                Ähnliche Songs zu deinem Mix
+            </h2>
+        </div>
+        <div class="center-table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Song</th>
+                        <th>Artist</th>
+                        <th>Release</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for index, row in df_neighbors_info.iterrows() %}
+                    <tr>
+                        <td>{{ row['track_title'] }}</td>
+                        <td>{{ row['artist_name'] }}</td>
+                        <td>{{ row['release_title'] }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        <div class="middle-header">
+            <a href="{{ url_for('index') }}"><button class="larger-button">Neuen Mix erstellen</button></a>
+        </div>
+    </ul>
+    {% endblock %}
+</body>
+</html>
